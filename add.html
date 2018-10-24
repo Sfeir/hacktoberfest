@@ -10,7 +10,8 @@
     <script>
         const textarea = document.getElementById('list');
 
-        textarea.value = JSON.parse(localStorage.getItem('users')).join('\n');
+        const users = localStorage.getItem('users') || '[]';
+        textarea.value = JSON.parse(users).join('\n');
         
         document.querySelector('.add').addEventListener('click', () => {
           listString = textarea.value;
