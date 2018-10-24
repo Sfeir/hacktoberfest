@@ -1,7 +1,8 @@
 function calculate() {
   const users = JSON.parse(localStorage.getItem('users'));
 
-  Promise.all(users.map(getPullRequestHacktoberfest))
+  if (users && Array.isArray(users)) {
+    Promise.all(users.map(getPullRequestHacktoberfest))
       .then(results => results.reduce((total, count) => total += count, 0))
       .then(total => {
         if(total < 10) {
@@ -9,6 +10,7 @@ function calculate() {
         }
         document.getElementById('pr').innerHTML =  `<span class="count">${total}</span>`
       });
+  }
 }
 
 function getPullRequestHacktoberfest(author) {
