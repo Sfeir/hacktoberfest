@@ -1,0 +1,56 @@
+@font-face {
+    font-family: PrinceValiant;
+    src: url(PrinceValiant.ttf);
+}
+
+html {
+    background-color: #562d41;
+}
+
+body {
+    background-image: url(./hacktoberfest.png);
+    height: 98vh;
+}
+
+.app {
+    margin: auto;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Montserrat";
+    font-size: 27px;
+}
+
+.text {
+    font-size: 60px;
+}
+
+.text:before {
+    content: '';
+    display: block;
+    height: 60px;
+}
+
+.count {
+    color: #e88565;
+    font-size: 180px;
+    margin-left: 20px;
+}
+
+.container {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    width: 800px;
+    left: 1000px;
+    top: 100px;
+    color: #f99957;
+    font-family: PrinceValiant;
+}
+
+.sfeir-logo {
+    height: 60px;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+}
